@@ -604,7 +604,8 @@ PlayerSettings:
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 1
   webGLLinkerTarget: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: TILTBRUSH_STEAMVRPRESENT
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 0
