@@ -25,6 +25,7 @@ public class SteamVR_LaserPointer : MonoBehaviour
     public Transform reference;
     public event PointerEventHandler PointerIn;
     public event PointerEventHandler PointerOut;
+    private Material newMaterial;
 
     Transform previousContact = null;
 
@@ -58,7 +59,7 @@ public class SteamVR_LaserPointer : MonoBehaviour
                 Object.Destroy(collider);
             }
         }
-        Material newMaterial = new Material(Shader.Find("Unlit/Color"));
+        newMaterial = new Material(Shader.Find("Unlit/Color"));
         newMaterial.SetColor("_Color", color);
         pointer.GetComponent<MeshRenderer>().material = newMaterial;
 	}
@@ -137,5 +138,10 @@ public class SteamVR_LaserPointer : MonoBehaviour
             pointer.transform.localScale = new Vector3(thickness, thickness, dist);
         }
         pointer.transform.localPosition = new Vector3(0f, 0f, dist/2f);
+
+        if (newMaterial != null)
+        {
+            newMaterial.SetColor("_Color", color);
+        }
     }
 }
