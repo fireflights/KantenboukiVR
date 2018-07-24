@@ -16,7 +16,8 @@ public class Draggable : MonoBehaviour
 	void FixedUpdate()
     {
         SteamVR_Controller.Device device = SteamVR_Controller.Input((int)rightController.index);
-		if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) )
+
+            if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) )
         { 
 			dragging = false;
             Ray ray = new Ray(rightController.transform.position, rightController.transform.forward);
