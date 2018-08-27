@@ -13,6 +13,8 @@ class Point {
 public class MeshLineRenderer : MonoBehaviour
 {
 
+    public ColorManager colorMgr;
+
     public Material lmat;
 
     private Mesh ml;
@@ -26,7 +28,18 @@ public class MeshLineRenderer : MonoBehaviour
     void Start()
     {
         ml = GetComponent<MeshFilter>().mesh;
-        GetComponent<MeshRenderer>().material = lmat;
+
+        //Set the main Color of the Material to green
+    }
+
+
+    public void setColorManager(ColorManager colMgr)
+    {
+        colorMgr = colMgr;
+
+        GetComponent<MeshRenderer>().material.color = colorMgr.color;
+        //GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        //GetComponent<MeshRenderer>().receiveShadows = false;
     }
 
     public void setWidth(float width)

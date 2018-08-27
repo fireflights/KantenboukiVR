@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ColorSaturationBrightness
   m_Shader: {fileID: 4800000, guid: 799dd56aa183c4218a7a67cd807224a1, type: 3}
@@ -24,4 +24,4 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0.51832634, a: 1}
+    - _Color: {r: 0, g: 1, b: 0.019965108, a: 1}

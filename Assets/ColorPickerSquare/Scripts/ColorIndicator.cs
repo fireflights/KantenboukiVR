@@ -1,10 +1,12 @@
 using UnityEngine;
+using Valve.VR;
+
 
 public class ColorIndicator : MonoBehaviour {
 
 	HSBColor color;
 
-	void Start() {
+    void Start() {
 		color = HSBColor.FromColor(GetComponent<Renderer>().sharedMaterial.GetColor("_Color"));
 		transform.parent.BroadcastMessage("SetColor", color);
 	}
