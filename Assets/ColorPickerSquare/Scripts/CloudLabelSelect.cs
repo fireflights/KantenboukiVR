@@ -3,7 +3,7 @@ using Valve.VR;
 
 public class CloudLabelSelect : MonoBehaviour
 {
-
+    public Transform thumb;
     bool dragging;
 
     public SteamVR_TrackedObject rightController;
@@ -22,6 +22,7 @@ public class CloudLabelSelect : MonoBehaviour
             {
                 dragging = true;
                 ColorManager.Instance.cloudLabel = GetComponent<Collider>().gameObject.name;
+                thumb.position = GetComponent<Collider>().gameObject.transform.position;
             }
         }
         if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger)) dragging = false;
@@ -34,6 +35,7 @@ public class CloudLabelSelect : MonoBehaviour
             if (GetComponent<Collider>().Raycast(ray, out hit, 100))
             { 
                 ColorManager.Instance.cloudLabel = GetComponent<Collider>().gameObject.name;
+                thumb.position = GetComponent<Collider>().gameObject.transform.position;
             }
 
         }

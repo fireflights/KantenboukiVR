@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4919912457464372}
   - component: {fileID: 33639522822965498}
   - component: {fileID: 23782825435778936}
-  - component: {fileID: 114366007473271074}
   - component: {fileID: 65594675505048424}
   - component: {fileID: 114305771600316884}
   m_Layer: 0
@@ -109,15 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b01229aedb37574d818aec1ee9843e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thumb: {fileID: 0}
   rightController: {fileID: 0}
---- !u!114 &114366007473271074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763621341394790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba3a77568665644dabfcbf0832fc5bad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
